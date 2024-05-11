@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>RoomMate Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="image/PG_Dundho-removebg-preview1.png" alt=""> </a>
+        <div class="nav-menu-box">
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="rooms_seller.html" class="nav-link">Rooms</a> </li>
+          <!-- <li> <a href="resturant.html" class="nav-link">Resturants</a> </li> -->
+          <li> <a href="contact_seller.html" class="nav-link">Contact</a> </li>
+          <li><a href="login.html"><img src="image/user_9187604.png" alt=""></a></li>
+        </ul>
+        </div>
+        <!-- <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div> -->
+      </nav>
+    </div>
+  </header>
+  <!-- <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script> -->
+
+  <section class="home " id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Hello Dosto</h1>
+          <p>Ab room dena hua aur bhi asaan</p>
+          <a href="about_seller.html"><button>MORE INFO</button></a>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/image-1.webp" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/image-1.webp" alt="" class="slide active" onclick="img('image/image-1.webp')">
+        <img src="image/image-2.webp" alt="" class="slide" onclick="img('image/image-2.webp')">
+        <img src="image/image-3.webp" alt="" class="slide" onclick="img('image/image-3.webp')">
+        <img src="image/image-4.webp" alt="" class="slide" onclick="img('image/image-4.webp')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <form id="addForm" action="#" method="GET" style="display: flex;flex-direction: row;width: 1000px;">
+        <div class="box">
+          <label id="add-value">Owner Name:
+          <input type="text" placeholder="Name" id="ownername" name="OWNERNAME">
+          </label>
+        </div>
+        <div class="box">
+          <label id="add-value">PG Name:
+          <input type="text" placeholder="Name" id="pgname" name="PGNAME">
+        </label>
+        </div>
+        <div class="box">
+          <label id="add-value">Contact Number:
+          <input type="text" placeholder="+91" id="contactnumber" name="CONTACTNUMBER">
+        </label>
+        </div>
+        <div class="box">
+          <label id="add-value">Price:
+          <input type="text" placeholder="0" id="price" name="PRICE">
+        </label>
+        </div>
+      </div>
+      <div class="add">
+        <input type="submit" value="Add">
+      </div>
+    </form>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/image0_0.jpg" alt="" class="image1">
+          <img src="image/image1_0.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>Maximize Comfort and Welcoming Atmosphere in your Living Space</h5>
+          <h2>Welcome to RoomMate</h2>
+          <p>Welcome to RoomMate, your home away from home in the heart of the city.
+
+            At RoomMate, we understand the challenges of finding comfortable and affordable accommodation, especially in urban environments. That's why we've created a welcoming and inclusive community for individuals seeking a convenient and hassle-free living experience.</p>
+          <p>Our mission is to provide a safe and comfortable living environment where residents can thrive and create lasting memories. Whether you're a student, a working professional, or someone new to the city, RoomMate offers a range of accommodations tailored to your needs.</p>
+          <a href="about_seller.html"><button class="btn1">READ MORE</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>Our Priroties</h2>
+        <p>At RoomMate, we prioritize your comfort and convenience. Our facilities are thoughtfully designed to enhance your living experience and provide you with everything you need to feel at home. Here's what you can expect when you choose RoomMate as your residence:</p>
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-list"></i>
+            <span>Well-Appointed Rooms</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-seedling"></i>
+            <span>Clean and Hygienic Environment</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-globe"></i>
+            <span>High-Speed Internet Access</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-shield"></i>
+            <span>24/7 Security</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-user"></i>  
+            <span>Common Areas for Relaxation</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-user-tie"></i>
+            <span>Laundry Facilities</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-phone"></i>
+            <span>Regular Maintenance and Support</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-calendar"></i>
+            <span>Community Events and Activities</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>Maximize Comfort and Welcoming Atmosphere in your Living Space</h5>
+          <h2>Rooms $ Paying Guest</h2>
+        </div>
+        <!-- <div class="button">
+          <button class="btn1">VIEW ALL</button>
+        </div> -->
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="image/image0_0 (1).jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Dadudayal PG</h3>
+            <p> <span>Rs</span> 8000<span>/per month</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/image1_0 (1).jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Gupta PG</h3>
+            <p> <span>Rs</span> 7000<span>/per month</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Madhav PG</h3>
+            <p> <span>Rs</span> 10,000<span>/per month</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h5>AT THE HEART OF COMMUNICATION</h5>
+          <h2>People Say</h2>
+        </div>
+
+        <div class="para">
+          <p>As a seller who has engaged with RoomMate's room rental services, I am delighted to share my review of our partnership and the experience we've had working together.</p>
+
+          <div class="box flex">
+            <div class="img">
+              <img src="image/c.jpg" alt="">
+            </div>
+            <div class="name">
+              <h5>Kavya Agarwal</h5>
+              <h5>Jaipur</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="image/re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Mess</h2>
+          <p> At RoomMate, we understand the importance of wholesome meals and a comfortable dining experience. Our mess facilities are designed to provide nutritious and delicious food that feels like home-cooked meals.</p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Rajasthani Kitchen</h2>
+            <div class="accordionItemContent">
+              <p>Welcome to the Rajasthani Kitchen, where the essence of Rajasthan comes alive through its rich and vibrant cuisine. Our Rajasthani kitchen is a treasure trove of flavors, offering a culinary journey that reflects the royal heritage and cultural richness of the desert state.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Punjabi Kitchen</h2>
+            <div class="accordionItemContent">
+              <p>Welcome to the Punjabi Kitchen, where the robust and hearty cuisine of Punjab takes center stage. Our Punjabi kitchen is a celebration of rich flavors, aromatic spices, and the warm hospitality that defines Punjabi culture.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Shree Shyam Resturant</h2>
+            <div class="accordionItemContent">
+              <p>Step into the culinary world of Shree Shyam Restaurant, where every dish is crafted with passion, authenticity, and a touch of tradition. Nestled in the heart of the city, Shree Shyam Restaurant invites you on a gastronomic journey through the rich and diverse flavors of Indian cuisine.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Balaji Bhojnalaya</h2>
+            <div class="accordionItemContent">
+              <p>Step into the world of exquisite flavors and warm hospitality at Balaji Bhojnalaya, where every meal is a celebration of culinary excellence and tradition. Located at the heart of the city, Balaji Bhojnalaya invites you to embark on a gastronomic journey through the authentic tastes of India.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp" width="600" height="450" style="border:0;"
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p>At RoomMate, we strive to provide convenient and secure payment options to ensure a smooth and hassle-free shopping experience for our customers. We accept the following payment methods:</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Recent News</h3>
+
+        <ul>
+          <li>Our Secret About RoomMate</li>
+          <li>Chill and Escape in Our Natural Shelters</li>
+          <li>September in RoomMate</li>
+          <li>Massive Offer</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li>About RoomMate</li>
+          <li>Customer Care/Help</li>
+          <li>Corporate Accounts</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Contact Us</h3>
+
+        <ul>
+          <li>Malviya Nagar, Jaipur</li>
+          <li><i class="far fa-envelope"></i> pgdundho@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i> 123 456 7898 </li>
+          <li><i class="far fa-phone-alt"></i> 123 456 7898 </li>
+          <li><i class="far fa-comments"></i> 24/ 7 Customer Services </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RoomMate Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="image/PG_Dundho-removebg-preview1.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="login_customer.html" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="rooms_customer.html" class="nav-link">Rooms</a> </li>
+          <li> <a href="resturant.html" class="nav-link">Food</a> </li>
+          <li> <a href="contact_customer.html" class="nav-link">Contact</a> </li>
+          <li><a href="login.html"><img src="image/user_9187604.png" alt=""></a></li>
+        </ul>
+
+        <!-- <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div> -->
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home top" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Hello Dosto</h1>
+          <p>Ab room dundhna hua aur bhi assan</p>
+          <a href="about_customer.html"><button>MORE INFO</button></a>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/image-1.webp" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/image-1.webp" alt="" class="slide active" onclick="img('image/image-1.webp')">
+        <img src="image/image-2.webp" alt="" class="slide" onclick="img('image/image-2.webp')">
+        <img src="image/image-3.webp" alt="" class="slide" onclick="img('image/image-3.webp')">
+        <img src="image/image-4.webp" alt="" class="slide" onclick="img('image/image-4.webp')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+
+<section class="about top" id="about" style="margin-top: 400px;">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/image0_0.jpg" alt="" class="image1">
+          <img src="image/image1_0.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+        <h5>Maximize Comfort and Welcoming Atmosphere in your Living Space</h5>
+        <h2>Welcome to RoomMate</h2>
+        <div class="right">
+            <div class="text">
+            <h2 style="font-family: cursive; font-weight: 800;">Who we are</h2>
+            </div>
+            <div class="accordionWrapper">
+            <div class="accordionItem open">
+                <h2 class="accordionIHeading" style="font-size: 20px;">Our Approach</h2>
+                <div class="accordionItemContent" style="width: 700px; padding: 5px;">
+                <p>Committed to comfort, community, and convenience, fostering a supportive environment for diverse residents in urban living.
+                </p>
+                </div>
+            </div>
+            <div class="accordionItem open">
+                <h2 class="accordionIHeading" style="font-size: 20px;">Our Vision</h2>
+                <div class="accordionItemContent" style="width: 700px; padding: 5px;">
+                <p>Empowering residents with comfort, community, and convenience; fostering a vibrant, inclusive living environment for shared growth and well-being.
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+  </section>
+  <!-- <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script> -->
+
+<!-- <section class="info1 top">
+    <div class="container1">
+        <h1 class="heading1">What We Do</h1>
+    </div>
+    <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="image/r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Dadudayal PG</h3>
+            <p> <span>Rs</span> 8000<span>/per month</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Gupta PG</h3>
+            <p> <span>Rs</span> 7000<span>/per month</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Madhav PG</h3>
+            <p> <span>Rs</span> 10,000<span>/per month</span> </p>
+          </div>
+        </div>
+      </div>
+</section> -->
+<section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>Maximize Comfort and Welcoming Atmosphere in your Living Space</h5>
+          <h2>What We Do</h2>
+        </div>
+        <!-- <div class="button">
+          <button class="btn1">VIEW ALL</button>
+        </div> -->
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <h3 style="text-align: center;justify-content: center;padding: 20px;margin-top: 30px;">“At ‘We Build Network’, our mission is to connect visionaries, entrepreneurs, and changemakers, fostering collaboration and partnerships to drive meaningful progress and sustainable growth in diverse industries.”</h3>
+          </div>
+          <div class="text">
+            <h3 style="font-size: 30px;font-weight: 500;">-We Build Network</h3>
+            <!-- <p> <span>Rs</span> 8000<span>/per month</span> </p> -->
+          </div>
+        </div>
+        <div class="box">
+            <div class="img">
+              <h3 style="text-align: center;justify-content: center;padding: 20px;margin-top: 30px;">“At ‘We Strengthen’, our focus is on empowering individuals and organizations through targeted support, training, and resources, fostering resilience and growth in communities worldwide.”</h3>
+            </div>
+            <div class="text">
+              <h3 style="font-size: 30px;font-weight: 500;">— We Strengthen</h3>
+              <!-- <p> <span>Rs</span> 8000<span>/per month</span> </p> -->
+            </div>
+          </div>
+          <div class="box">
+            <div class="img">
+              <h3 style="text-align: center;justify-content: center;padding: 20px;margin-top: 30px;">“At ‘We Provide Care’, our mission is to deliver compassionate support and essential services to those in need, fostering well-being and dignity within our communities through dedicated care initiatives.”</h3>
+            </div>
+            <div class="text">
+              <h3 style="font-size: 30px;font-weight: 500;">— We Provide Care</h3>
+              <!-- <p> <span>Rs</span> 8000<span>/per month</span> </p> -->
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+<section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp" width="600" height="450" style="border:0;"
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p>At RoomMate, we strive to provide convenient and secure payment options to ensure a smooth and hassle-free shopping experience for our customers. We accept the following payment methods:</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Recent News</h3>
+
+        <ul>
+          <li>Our Secret About RoomMate</li>
+          <li>Chill and Escape in Our Natural Shelters</li>
+          <li>September in RoomMate</li>
+          <li>Massive Offer</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li>About RoomMate</li>
+          <li>Customer Care/Help</li>
+          <li>Corporate Accounts</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Contact Us</h3>
+
+        <ul>
+          <li>Malviya Nagar, Jaipur</li>
+          <li><i class="far fa-envelope"></i> pgdundho@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i> 123 456 7898 </li>
+          <li><i class="far fa-phone-alt"></i> 123 456 7898 </li>
+          <li><i class="far fa-comments"></i> 24/ 7 Customer Services </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RoomMate Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header" id="navigation-menu">
+        <div class="container">
+          <nav>
+            <a href="#" class="logo"> <img src="image/PG_DUNDHO-removebg-preview1.png" alt=""> </a>
+    
+            <ul class="nav-menu">
+              <li> <a href="login_seller.html" class="nav-link">Home</a> </li>
+              <li> <a href="about_seller.html" class="nav-link">About</a> </li>
+              <li> <a href="#rooms" class="nav-link">Rooms</a> </li>
+              <!-- <li> <a href="resturant.html" class="nav-link">Resturants</a> </li> -->
+              <li> <a href="contact_seller.html" class="nav-link">Contact</a> </li>
+              <li><a href="login.html"><img src="image/user_9187604.png" alt=""></a></li>
+            </ul>
+    
+            <!-- <div class="hambuger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div> -->
+          </nav>
+        </div>
+      </header>
+      <script>
+        const hambuger = document.querySelector('.hambuger');
+        const navMenu = document.querySelector('.nav-menu');
+    
+        hambuger.addEventListener("click", mobileMenu);
+    
+        function mobileMenu() {
+          hambuger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+        }
+    
+        const navLink = document.querySelectorAll('.nav-link');
+        navLink.forEach((n) => n.addEventListener("click", closeMenu));
+    
+        function closeMenu() {
+          hambuger.classList.remove("active");
+          navMenu.classList.remove("active");
+        }
+      </script>
+
+<section class="home " id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Hello Dosto</h1>
+          <p>Ab room dena hua aur bhi asaan</p>
+          <a href="about_seller.html"><button>MORE INFO</button></a>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/image-1.webp" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/image-1.webp" alt="" class="slide active" onclick="img('image/image-1.webp')">
+        <img src="image/image-2.webp" alt="" class="slide" onclick="img('image/image-2.webp')">
+        <img src="image/image-3.webp" alt="" class="slide" onclick="img('image/image-3.webp')">
+        <img src="image/image-4.webp" alt="" class="slide" onclick="img('image/image-4.webp')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+</body>
+</html>
